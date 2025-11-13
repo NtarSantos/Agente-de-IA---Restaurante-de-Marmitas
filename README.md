@@ -1,4 +1,4 @@
-# 🤖 SDR Virtual Inteligente
+# 🤖 Atentende da Log Marmitas
 
 ![Status](https://img.shields.io/badge/status-MVP%20em%20desenvolvimento-black)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -13,7 +13,7 @@
 ## 📘 Sobre o Projeto
 
 A **Atendente Virtual Inteligente** é uma solução de **automação de pré-atendimento** desenvolvida para atender clientes via **Telegram** de forma **humanizada, eficiente e totalmente automática**.
-O projeto visa reduzir custos operacionais e aumentar a produtividade de atendentes comerciais, utilizando **Inteligência Artificial** e **orquestração de fluxos** com **n8n**.  
+O projeto visa reduzir custos operacionais e aumentar a produtividade de atendentes da Log Marmitas, utilizando **Inteligência Artificial** e **orquestração de fluxos** com **n8n**.  
 
 
 ---
@@ -27,7 +27,7 @@ Desenvolver uma **Atendente Virtual Inteligente** capaz de:
 
 ---
 
-## 🧠 Testar O Agente de IA
+## 👁️‍🗨️ Testar O Agente de IA
 
 Acessar o telegram e pesquisar pelo o bot **@ntarbotlogmanagerbot**
 https://web.telegram.org/k/#@ntarbotlogmanagerbot
