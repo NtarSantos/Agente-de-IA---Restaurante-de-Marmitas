@@ -1,12 +1,12 @@
 # 🤖 SDR Virtual Inteligente
 
-![Status](https://img.shields.io/badge/status-MVP%20em%20desenvolvimento-blue)
+![Status](https://img.shields.io/badge/status-MVP%20em%20desenvolvimento-black)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![IA](https://img.shields.io/badge/IA-OpenAI%20--4.1-yellow)
 ![Automation](https://img.shields.io/badge/Automation-n8n-orange)
 ![Database](https://img.shields.io/badge/Database-PostgreSQL-blue)
-![Google Sheet](https://img.shields.io/badge/Planilha-Google%20|%20Gerenciamento|%20Pedidos-lightgrey)
-![TelegramAPI](https://img.shields.io/badge/TelegramBot%20API-success)
+![Google Sheet](https://img.shields.io/badge/Planilha-Google%20|%20Gerenciamento|%20Pedidos-lightgreen)
+![TelegramAPI](https://img.shields.io/badge/TelegramBot%20API-success-lightblue)
 
 ---
 
@@ -27,11 +27,21 @@ Desenvolver uma **Atendente Virtual Inteligente** capaz de:
 
 ---
 
+## 🧠 Testar O Agente de IA
+
+Acessar o telegram e pesquisar pelo o bot **@ntarbotlogmanagerbot**
+https://web.telegram.org/k/#@ntarbotlogmanagerbot
+
+O gerenciamento dos pedidos ficaram salvos na **planilha do google sheet** abaixo:
+https://docs.google.com/spreadsheets/d/1IQf7Cm1Mv2kP0JJz8-S-jkwFy74uq0JRIGaFubke5co/edit?usp=sharing
+
+---
+
 ## 🧠 Tecnologias Utilizadas
 
 | Camada | Tecnologia | Função |
 |--------|-------------|--------|
-| **IA** | [OpenAI – 4.1 Mini](https://platform.openai.com/) | Modelo leve e super inteligente |
+| **IA** | [OpenAI – 4.1 mini](https://platform.openai.com/) | Modelo leve e super inteligente |
 | **Automação** | [n8n (self-hosted)](https://n8n.io) | Orquestração de fluxos e integrações |
 | **Mensageria** | [Telegram](https://web.telegram.org/k/#@ntarbotlogmanagerbot) | Envio e recebimento de mensagens Telegram |
 | **Banco de Dados** | PostgreSQL | Salvar conversas e ter memória |
@@ -95,12 +105,13 @@ O projeto foi construído com base **modular e escalável**, permitindo evoluç�
 - **dbdiagram.io / Figma** — Modelagem visual
 - **Azure Data Studio** — Visualização e análise do banco de dados
 - **Docker Compose** — Empacotamento e deploy local do n8n e Postgres
+- **API do Google Sheets** - Para permissão e manipulação da planilha. 
 
 ---
 
 ## 🗃️ Arquitetura do DataBase
 
-- https://dbdiagram.io/d/SDR_VIRTUAL-691528c26735e111708c65ec
+- (https://dbdiagram.io/d/Atentente_Log_Manager-69162eea6735e11170b7fa5d)
 
 ---
 
