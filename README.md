@@ -23,6 +23,8 @@ O projeto visa reduzir custos operacionais e aumentar a produtividade de atenden
 Desenvolver uma **Atendente Virtual Inteligente** capaz de:
 - Atender automaticamente clientes via Telegram;
 - Informar as marmitas que o restuarante possui disponível, fechar o pedido e salvar no google sheets.
+- Notifica o contato da cozinha com o resumo do pedido realizado. 
+- Sistema de Recuperação de Carrinho Abandonado (em inglês, Abandoned Cart Recovery), o cliente que não fechar o pedido após 10min, será relembrado/notificado.
 - Operar com **baixo custo**, **alta performance** e **estrutura pronta para escalar**.
 
 ---
@@ -84,11 +86,9 @@ As informações são registradas no PostgreSQL (Clientes, status, logs).
 
 ## 🚀 Arquitetura Evolutiva da Solução
 
-O projeto foi construído com base **modular e escalável**, permitindo evolução natural para um ecossistema distribuído:
-
 - 🔹 **n8n Cloud Pro** para automações escaláveis;
 - 🔹 **Banco isolado em PostgreSQL Cloud**;
-- 🔹 **Portal administrativo (FastAPI ou Spring Boot)** com dashboards e controle de múltiplos clientes;
+- 🔹 **Portal administrativo (FastAPI ou Spring Boot)** com dashboards, controle e gerencimente de clientes e pedidos;
 - 🔹 **Autenticação segura (JWT / OAuth2)** e controle de administradores;
 - 🔹 **Integração com CRMs e ferramentas de marketing**;
 - 🔹 **IA avançada (OpenAI / GPT-5)** para respostas mais humanas;
@@ -96,16 +96,14 @@ O projeto foi construído com base **modular e escalável**, permitindo evoluç�
 
 ---
 
----
-
 ## 🧰 Ferramentas de Desenvolvimento
 
-- **Visual Studio Code** — Desenvolvimento e testes
+- **Visual Studio Code** — Desenvolvimento e testes de engenharia de prompt em Markdown
 - **Postman / Thunder Client** — Testes de APIs
 - **dbdiagram.io / Figma** — Modelagem visual
 - **Azure Data Studio** — Visualização e análise do banco de dados
 - **Docker Compose** — Empacotamento e deploy local do n8n e Postgres
-- **API do Google Sheets** - Para permissão e manipulação da planilha. 
+- **API do Google Sheets** - Para permissão e manipulação de planilhas. 
 
 ---
 
