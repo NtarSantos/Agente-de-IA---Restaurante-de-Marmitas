@@ -1,4 +1,4 @@
-# 🤖 Atentende da Log Marmitas
+# 🤖 Atentende do Restaurante Log Marmitas
 
 ![Status](https://img.shields.io/badge/status-MVP%20em%20desenvolvimento-black)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -12,7 +12,7 @@
 
 ## 📘 Sobre o Projeto
 
-A **Atendente Virtual Inteligente** é uma solução de **automação de pré-atendimento** desenvolvida para atender clientes via **Telegram** de forma **humanizada, eficiente e totalmente automática**.
+O **Atendente Virtual** é uma solução de **automação de pré-atendimento** desenvolvida para atender clientes via **Telegram** de forma **humanizada, eficiente e totalmente automática**.
 O projeto visa reduzir custos operacionais e aumentar a produtividade de atendentes da Log Marmitas, utilizando **Inteligência Artificial** e **orquestração de fluxos** com **n8n**.  
 
 
@@ -20,19 +20,17 @@ O projeto visa reduzir custos operacionais e aumentar a produtividade de atenden
 
 ## 🎯 Objetivo
 
-Desenvolver uma **Atendente Virtual Inteligente** capaz de:
+Desenvolver um **Atendente Virtual Inteligente** capaz de:
 - Atender automaticamente clientes via Telegram;
 - Informar as marmitas que o restuarante possui disponível, fechar o pedido e salvar no google sheets.
-- Notifica o contato da cozinha com o resumo do pedido realizado. 
 - Sistema de Recuperação de Carrinho Abandonado (Abandoned Cart Recovery), o cliente que não fechar o pedido após 10min, será relembrado/notificado.
-- Operar com **baixo custo**, **alta performance** e **estrutura pronta para escalar**.
 
 ---
 
-## 👁️‍🗨️ Testar O Agente de IA
+## 👁️‍🗨️ Testar o Agente de IA
 
 Acessar o telegram e pesquisar pelo o bot **@ntarbotlogmanagerbot**
-https://web.telegram.org/k/#@ntarbotlogmanagerbot
+[https://web.telegram.org/k/#@ntarbotlogmanagerbot](https://t.me/ntarbotlogmanagerbot)
 
 O gerenciamento dos pedidos ficarão salvos na **planilha do google sheet** abaixo:
 https://docs.google.com/spreadsheets/d/1IQf7Cm1Mv2kP0JJz8-S-jkwFy74uq0JRIGaFubke5co/edit?usp=sharing
@@ -72,7 +70,7 @@ Cada componente conversa entre si de forma harmônica, garantindo fluidez e auto
          🗄️ Banco de Dados (PostgreSQL)
         ├── Clientes
         ├── Mensagens
-        └── Memório do atendimento
+        └── Memória do atendimento
                           │
                           ▼
           ☁️ Google Sheets (Gerenciamente)
@@ -116,3 +114,30 @@ As informações são registradas no PostgreSQL (Clientes, status, logs).
 ## 📜 Licença
 
 Este projeto está licenciado sob a [MIT License](LICENSE).
+
+---
+
+## Explicando o Fluxo:
+- Recebe a mensagem através do webhook do telegram, utilizando a API do Bot, gerado no BotFather.
+- Junta as mensagens "quebradas" recebidas uma a atrás da outra, dentro de uma janela de tempo de 8seg.
+- Faz o download dos áudios recebidos e transcreve pelo modelo mais atual da OpenAI em texto.
+
+<img width="1717" height="570" alt="image" src="https://github.com/user-attachments/assets/de5634be-2ee4-482d-a2eb-9c00d92f1bb3" />
+
+---
+
+- Aqui temos o Agente Principal, com todo o contexto e a base do conhecimento sobre o restaurante e marmitas. 
+- O Contexto está todo em Markdown para uma melhor compreensão do modelo. 
+- Adicionei um separador de mensagens que são enviadas em loop para trazer uma humanidade maior e facilitar a leitura, não ficar um texto grande e blocado. 
+- Temos também nesse print o fluxo da finalização do pedido, que foi treinado pelo modelo e o nó code com javascript faz o tratamento dos dados.
+- Salva as informações na planilha e envia mensagem final para o cliente sobre o pedido. 
+<img width="1362" height="458" alt="image" src="https://github.com/user-attachments/assets/faeb8993-7033-4c55-a3f0-8aceab39d9db" />
+
+---
+## Bônus - Follow up Personalizado 
+- Como uma evolução para esse teste, desenvolvi um sistema simples de follow up.
+- Onde recebo um pedido aberto, na primeira interação do cliente.
+- 10min depois, pode ser configurado, ela valida se o pedido ainda está em aberto. 
+- Mande uma solicitação para um modelo treinado só para retomar uma conversa(Memória do banco), de onde parou.
+<img width="1240" height="404" alt="image" src="https://github.com/user-attachments/assets/e10f1e27-73e3-474e-afd2-119dcdfb0a70" />
+
