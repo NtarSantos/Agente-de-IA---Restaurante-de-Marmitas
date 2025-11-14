@@ -24,7 +24,7 @@ Desenvolver uma **Atendente Virtual Inteligente** capaz de:
 - Atender automaticamente clientes via Telegram;
 - Informar as marmitas que o restuarante possui disponível, fechar o pedido e salvar no google sheets.
 - Notifica o contato da cozinha com o resumo do pedido realizado. 
-- Sistema de Recuperação de Carrinho Abandonado (em inglês, Abandoned Cart Recovery), o cliente que não fechar o pedido após 10min, será relembrado/notificado.
+- Sistema de Recuperação de Carrinho Abandonado (Abandoned Cart Recovery), o cliente que não fechar o pedido após 10min, será relembrado/notificado.
 - Operar com **baixo custo**, **alta performance** e **estrutura pronta para escalar**.
 
 ---
@@ -34,7 +34,7 @@ Desenvolver uma **Atendente Virtual Inteligente** capaz de:
 Acessar o telegram e pesquisar pelo o bot **@ntarbotlogmanagerbot**
 https://web.telegram.org/k/#@ntarbotlogmanagerbot
 
-O gerenciamento dos pedidos ficaram salvos na **planilha do google sheet** abaixo:
+O gerenciamento dos pedidos ficarão salvos na **planilha do google sheet** abaixo:
 https://docs.google.com/spreadsheets/d/1IQf7Cm1Mv2kP0JJz8-S-jkwFy74uq0JRIGaFubke5co/edit?usp=sharing
 
 ---
