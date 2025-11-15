@@ -137,7 +137,7 @@ Este projeto está licenciado sob a [MIT License](LICENSE).
 ## Bônus - Follow up Personalizado 
 - Como uma evolução para esse teste, desenvolvi um sistema simples de follow up.
 - Onde recebo um pedido aberto, na primeira interação do cliente.
-- 10min depois, pode ser configurado, ela valida se o pedido ainda está em aberto. 
-- Mande uma solicitação para um modelo treinado só para retomar uma conversa(Memória do banco), de onde parou.
+- 10min depois, pode ser configurado esse tempo, ele valida se o pedido ainda está em aberto. 
+- Mando uma solicitação para um modelo treinado só para retomar uma conversa(Memória do banco), de onde parou.
 <img width="1240" height="404" alt="image" src="https://github.com/user-attachments/assets/e10f1e27-73e3-474e-afd2-119dcdfb0a70" />
 
